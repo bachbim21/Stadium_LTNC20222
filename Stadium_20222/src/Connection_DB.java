@@ -21,16 +21,4 @@ public class Connection_DB {
 
 
 
-/**public static void main(String args[]) {
- try {
- Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb","root","1232213");
- Statement statement = connection.createStatement();
- ResultSet resultSet = statement.executeQuery("select * from testdb.student");
- while (resultSet.next()){
- System.out.println(resultSet.getString("name") + " " + resultSet.getString("address"));
- }
- }
- catch (Exception e){
- e.printStackTrace();
- }
- }*/
+
