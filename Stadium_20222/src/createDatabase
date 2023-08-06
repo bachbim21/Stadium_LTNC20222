@@ -1,0 +1,59 @@
+use stadium;
+create table employee(name varchar(1000), age varchar(1000), gender varchar(1000), job varchar(1000), salary varchar(1000),
+phone varchar(1000), ID varchar(1000));
+
+describe employee;
+
+select * from employee;
+
+ALTER TABLE employee
+add column ID varchar(30);
+
+ALTER TABLE employee
+add primary key (ID) ;
+
+insert into employee
+values ('bách','12','Nữ','Lao công', '12321', '12121212','12222121212112');
+
+ALTER TABLE employee
+drop column phone;
+
+alter table employee
+add phone varchar(100);
+
+-- ALTER TABLE table_name CHANGE COLUMN col_name col_name  VARCHAR(1000);
+alter table employee change ID ID varchar(200);
+
+drop table employee;
+
+delete from employee where ID = '1232';
+
+create table san(stadiumnumber varchar(200), availability varchar(200), price varchar(200), type varchar(200));
+
+delete from san where stadiumnumber = 'Sân 1';
+
+alter table san
+add status varchar(100);
+
+-- add column price varchar(200);
+
+-- drop column price;
+
+-- add primary key (stadiumnumber);
+
+create table customer(ID varchar(200), name varchar(300),phone varchar(30) , gender varchar(150), stadiumnumber varchar(100), checkintime varchar(100), deposit varchar(200));
+
+select * from customer;
+
+alter table customer add primary key (ID);
+
+delete from customer where name = 'Dark';
+
+select * from san where status ='Có thể thuê';
+
+update san set status = 'Không thể thuê' where stadiumnumber = 'Sân 1';
+
+truncate table san;
+
+select * from san
+
